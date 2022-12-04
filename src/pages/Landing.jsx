@@ -1,4 +1,5 @@
 import Button from "../components/Button";
+import {A} from '@solidjs/router'
 
 export default function Landing() {
   return (
@@ -19,7 +20,9 @@ export default function Landing() {
         <p className="flex justfy-center text-slate-500 text-2xl text-center mb-16">
           Enjoy Woosh!
         </p>
+        <A href="/home">
         <Button />
+        </A>
         <img
           src="../src/assets/Horizontal_Logo.svg"
           alt="logo"
