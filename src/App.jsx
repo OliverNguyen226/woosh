@@ -13,7 +13,7 @@ function App() {
 
     <div class="container">
       <Routes>
-        {/* <Route path="/" component={Home} /> */}
+        <Route path="/" component={Home} />
         <Route path="/quizcategory" component={QuizCategory} />
         <Route path="/resource" component={Resource} />
       </Routes>
