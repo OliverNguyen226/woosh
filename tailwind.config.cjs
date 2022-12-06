@@ -4,7 +4,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'comfortaa': ['comfortaa'],
     extend: {},
+    },
   },
   plugins: [],
 };
