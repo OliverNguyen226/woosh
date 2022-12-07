@@ -7,7 +7,7 @@ module.exports = {
     fontFamily: {
       'comfortaa': ['comfortaa'],
       'work-sans': ['work-sans'],
-    extend: {},
+      extend: {},
     },
   },
   plugins: [],

@@ -3,15 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 .bodyFont {
-  font-family: "Comfortaa", cursive;
+  font-family: 'Comfortaa', cursive;
   font-size: 24px;
 }
 
 .headingFont {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-size: 36px;
 }
+
 
 /* :root{
   background-color: #D6EADF;
