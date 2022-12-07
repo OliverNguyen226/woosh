@@ -8,7 +8,7 @@ export default function Landing() {
         class="flex flex-col items-center justify-center bg-blue-300 h-screen w-screen"
       >
         <img
-          src="../src/assets/VerticalLogo.svg"
+          src="../wooshLogo.png"
           alt="logo"
           class="mt-12"
         />
@@ -26,7 +26,7 @@ export default function Landing() {
           <Button />
         </A>
         <img
-          src="../src/assets/Horizontal_Logo.svg"
+          src="../horizontal_Logo.png"
           alt="logo"
           class="mt-16"
         />
