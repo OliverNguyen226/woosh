@@ -3,40 +3,50 @@ import { A } from '@solidjs/router';
 const Nav = () => {
     return (
 
-        <div className='flex bg-[#9FC0FF] w-screen h-24 absolute bottom-0 justify-between p-2'>
+        <div class='flex bg-[#9FC0FF] w-screen h-24 absolute bottom-0 justify-around p-2'>
 
-            <div className='flex flex-col m-auto justify-center items-center'>
-                <div className="text-[#5383DF] text-3xl font-light bg-white h-24 w-24 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
-                    <img src="/home.png" className="h-16 w-16 " />
+            <A href='/home' >
+                <div class='flex flex-col m-auto justify-center items-center'>
+                    <div class="text-[#5383DF] text-3xl font-light bg-white h-16 w-16 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
+                        <img src="/home.png" class="h-10 w-10 " />
+                    </div>
+                    <p class='text-sm'>
+                        Home
+                    </p>
                 </div>
-                <p>
-                    Home
-                </p>
+            </A>
 
-            </div>
-
-
-            <div className='flex flex-col m-auto justify-center items-center'>
-                <div className="text-[#5383DF] text-3xl font-light bg-white h-24 w-24 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
-                    <img src="/quiz.png" className=" w-16 h-16 " />
+            <A href='/quizcategory' >
+                <div class='flex flex-col m-auto justify-center items-center'>
+                    <div class="text-[#5383DF] text-3xl font-light bg-white h-16 w-16 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
+                        <img src="/quiz.png" class=" h-10 w-10  " />
+                    </div>
+                    <p class='text-sm'>
+                        Quiz
+                    </p>
                 </div>
-                <p>Quiz</p>
-            </div>
+            </A>
 
-            <div className='flex flex-col m-auto justify-center items-center'>
-                <div className="text-[#5383DF] text-3xl font-light bg-white h-24 w-24 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
-                    <img src="/instruction.png" className=" w-16 h-16" />
+            <A href='' >
+                <div class='flex flex-col m-auto justify-center items-center'>
+                    <div class="text-[#5383DF] text-3xl font-light bg-white h-16 w-16 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
+                        <img src="/instruction.png" class=" h-10 w-10 " />
+                    </div>
+                    <p class='text-sm'>
+                        Instruction
+                    </p>
                 </div>
-                <p>Instruction</p>
-            </div>
-
-            <div className='flex flex-col m-auto justify-center items-center'>
-                <div className="text-[#5383DF] text-3xl font-light bg-white h-24 w-24 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
-                    <img src="/resource.png" className=" w-16 h-16" />
+            </A>
+            <A href='/resource' >
+                <div class='flex flex-col m-auto justify-center items-center'>
+                    <div class="text-[#5383DF] text-3xl font-light bg-white h-16 w-16 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
+                        <img src="/resource.png" class=" h-10 w-10 " />
+                    </div>
+                    <p class='text-sm'>
+                        Resource
+                    </p>
                 </div>
-                <p>Resource</p>
-            </div>
-
+            </A>
         </div >
     )
 }

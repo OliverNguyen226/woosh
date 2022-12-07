@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'comfortaa': ['comfortaa'],
-      'Work Sans': ['Work Sans'],
-    extend: {},
+      'work-sans': ['work-sans'],
+      extend: {},
     },
   },
   plugins: [],
