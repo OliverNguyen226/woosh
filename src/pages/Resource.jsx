@@ -42,16 +42,6 @@ const Resource = () => {
                 </ul>
             </div>
 
-
-
-
-
-
-
-
-
-
-
             <div class="bg-[#9FC0FF] text-2xl h-20 w-full flex pl-10 items-center">
                 Useful resources
             </div>
