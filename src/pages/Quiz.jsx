@@ -82,7 +82,10 @@ function Quiz() {
   return (
     <div class="App">
       {/* 1. Header  */}
-      <h1>Quiz - <br></br>Hand Hygiene </h1>
+      <div class="header">
+        <img  class="logo" src="SmallLogo.png" alt=""  style="position: absolute; top: 0; left: 0;" />
+      <h1>Quiz - Hand Hygiene </h1>
+      </div>
 
       {/* 2. Current Score  */}
       {/* <h2>Score: {score()}</h2> */}
