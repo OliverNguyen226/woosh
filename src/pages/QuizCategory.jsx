@@ -25,7 +25,7 @@ const QuizCategory = () => {
                     Foot<br /> Woosh
                 </div>
             </div>
-            <Nav />
+            {/* <Nav /> */}
 
 
         </div>

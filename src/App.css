@@ -1,3 +1,97 @@
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
+
+body {
+    background-color: #D6EADF;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #5F7BB1;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18;
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+    margin: 0px;
+}
+
+hr {
+    color: red;
+    border: 1px solid red;
+}
+
+/* .answers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    width: 100vw;
+} */
+
+.options {
+    width: 100vw;
+    background-color: #F1F7FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    /* padding-top:  */
+}
+
+.option {
+    color: blue;
+    padding: 10px;
+    width: 80%;
+    border-bottom: 1px solid black;
+}
+
+.option:last-child {
+    border-bottom: none;
+}
+
+/* .options {
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    color: #1256D9;
+  }
+
+  .options input[type="radio"] {
+    float: right;
+  }
+
+  h1 {
+    margin: 0 0 10px 0;
+  }
+  
+  input[type="radio"] {
+    height: 35px;
+    width: 35px;
+  }

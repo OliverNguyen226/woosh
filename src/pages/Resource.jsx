@@ -1,4 +1,4 @@
-import Nav from '../components/Nav'
+// import Nav from '../components/Nav'
 
 const Resource = () => {
     return (
@@ -84,7 +84,7 @@ const Resource = () => {
                 </ul>
             </div>
 
-            <Nav />
+            {/* <Nav /> */}
 
         </div>
     )
