@@ -25,7 +25,7 @@ function Home() {
         <A href="/quizcategory">
           <BigButton />
         </A>
-        <A href="/instruction">
+        <A href="/instructions">
           <p class="text-[#5F7BB1] mt-6 underline text-lg">
             or watch the instruction
           </p>
