@@ -5,6 +5,7 @@ const Home = lazy(() => import("./pages/Home"));
 const Resource = lazy(() => import("./pages/Resource"));
 const Landing = lazy(() => import("./pages/Landing"));
 const Quiz = lazy(() => import("./pages/Quiz"));
+const Instructions = lazy(() => import("./pages/Instructions"));
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/quizcategory" component={QuizCategory} />
       <Route path="/resource" component={Resource} />
       <Route path="/quiz" component={Quiz} />
+      <Route path="/instructions" component={Instructions} />
     </Routes>
   );
 }
