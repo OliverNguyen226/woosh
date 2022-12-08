@@ -1,7 +1,7 @@
 This is the code base for Woosh
 
 ## Technologies
-- [Solidjs](https://www.solidjs.com)
+- [SolidJS](https://www.solidjs.com)
 
 ## Development
 - Install dependencies: `yarn`
