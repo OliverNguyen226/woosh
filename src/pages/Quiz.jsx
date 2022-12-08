@@ -6,7 +6,8 @@ function Quiz() {
   // Properties
   const [showResults, setShowResults] = createSignal(false);
   const [currentQuestion, setCurrentQuestion] = createSignal(0);
-  const [questions, setQuestions] = createSignal([
+  // const [questions, setQuestions] = createSignal()
+   let questions =  [
     {
       text: "How many times a day should you brush your teeth?",
       answers: [
@@ -52,7 +53,7 @@ function Quiz() {
         { id: 3, text: "3", isCorrect: false },
       ],
     },
-  ])
+  ]
 
   const [score, setScore] = createSignal(0);
 
@@ -101,11 +102,11 @@ function Quiz() {
           <h2>
             {/* Question: {currentQuestion() + 1} out of {questions.length} */}
           </h2>
-          <h3 class="question-text">{questions()[currentQuestion()].text}</h3>
+          <h3 class="question-text">{questions[currentQuestion()].text}</h3>
 
           {/* List of possible answers  */}
           <ul class="options">
-          {questions()[currentQuestion()].answers.map((answer) => (
+          {questions[currentQuestion()].answers.map((answer) => (
   <li
   class="option">
     <input
@@ -119,12 +120,14 @@ function Quiz() {
 ))}
 
           </ul>
-        </div>
-      )}
-      <div className="buttons">
+          <div className="buttons">
     <button class="back">Back</button>
     <button class="next">Next </button>
       </div>
+        </div>
+        
+      )}
+
     </div>
   );
 }

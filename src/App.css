@@ -119,5 +119,5 @@ button.back{
 .buttons {
     display: inline-block;
     margin-top: 15px;
-    justify-content: space-around;
+    margin-left: 40px;
 }
