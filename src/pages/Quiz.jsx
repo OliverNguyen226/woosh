@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import Nav from "../components/Nav";
 import "../App.css";
 
 
@@ -81,7 +82,7 @@ function Quiz() {
   return (
     <div class="App">
       {/* 1. Header  */}
-      <h1>Quiz - <br></br>Hand Hygine </h1>
+      <h1>Quiz - <br></br>Hand Hygiene </h1>
 
       {/* 2. Current Score  */}
       {/* <h2>Score: {score()}</h2> */}
@@ -127,6 +128,7 @@ function Quiz() {
         </div>
         
       )}
+      <Nav></Nav>
 
     </div>
   );

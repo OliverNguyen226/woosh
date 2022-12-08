@@ -13,7 +13,7 @@ const QuizCategory = () => {
             <div class='grid grid-cols-2 gap-16 mt-8'>
 
                 <div class="text-[#5383DF] bodyFont text-3xl font-light bg-[#F1F7FF] h-36 w-36 flex m-auto items-center justify-center text-center rounded-2xl shadow-xl hover:bg-[#5383DF] hover:text-white cursor-pointer">
-                    <A href="">
+                    <A href='/quiz' >
                         Hair<br /> Woosh
                     </A>
                 </div>
