@@ -27,7 +27,7 @@ const Nav = () => {
                 </div>
             </A>
 
-            <A href='' >
+            <A href='/instructions' >
                 <div class='flex flex-col m-auto justify-center items-center'>
                     <div class="text-[#5383DF] text-3xl font-light bg-white h-16 w-16 flex m-auto items-center justify-center text-center rounded-full  border-4 border-[#7D98F9]">
                         <img src="/instruction.png" class=" h-10 w-10 " />

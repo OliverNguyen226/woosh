@@ -2,7 +2,7 @@
 
 iframe {
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 15%;
     border-radius: 10px;
 }
 
@@ -18,3 +18,11 @@ hr {
     color: black;
     border: .2px solid black;
 }
+
+body {
+    background-color: #D6EADF;
+}
+
+/* img.logo { 
+    margin-top: 13%;
+} */
