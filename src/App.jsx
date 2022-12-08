@@ -1,10 +1,12 @@
-import { createSignal } from "solid-js";
-import { lazy } from "solid-js";
+import { createSignal, lazy } from "solid-js";
 import { Route, Routes } from "@solidjs/router";
 const QuizCategory = lazy(() => import("./pages/QuizCategory"));
 const Home = lazy(() => import("./pages/home"));
 const Resource = lazy(() => import("./pages/Resource"));
 const Landing = lazy(() => import("./pages/Landing"));
+
+
+// const Home = lazy(() => import("./pages/Home"));
 
 function App() {
   return (
