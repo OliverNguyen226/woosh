@@ -2,7 +2,6 @@ import { createSignal } from "solid-js";
 import { A } from "@solidjs/router";
 import Button from "../components/Button";
 import Nav from "../components/Nav";
-import { A } from "@solidjs/router";
 
 export default function Landing() {
   // const [num, setNum] = createSignal(0);
