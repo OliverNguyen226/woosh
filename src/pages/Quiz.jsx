@@ -8,83 +8,18 @@ function Quiz() {
   const [showResults, setShowResults] = createSignal(false);
   const [currentQuestion, setCurrentQuestion] = createSignal(0);
   
-  const [score, setScore] = createSignal(0);
-  
+  // const [score, setScore] = createSignal(0);
   // const [questions, setQuestions] = createSignal()
-  let questions =  [
-    {
-      text: "How many times a day should you brush your teeth?",
-      answers: [
-        { id: 0, text: "2", isCorrect: true },
-        { id: 1, text: "3", isCorrect: false },
-        { id: 2, text: "0", isCorrect: false },
-        { id: 3, text: "1", isCorrect: false },
-      ],
-    },
-    {
-      text: "how long should you brush your teeth for?",
-      answers: [
-        { id: 0, text: "2 Mins", isCorrect: false },
-        { id: 1, text: "3 Mins", isCorrect: true },
-        { id: 2, text: "4 Mins", isCorrect: false },
-        { id: 3, text: "5 Mins", isCorrect: false },
-      ],
-    },
-    {
-      text: "How many times a day should you floss your teeth?",
-      answers: [
-        { id: 0, text: "2", isCorrect: true },
-        { id: 1, text: "3", isCorrect: false },
-        { id: 2, text: "0", isCorrect: false },
-        { id: 3, text: "1", isCorrect: false },
-      ],
-    },
-    {
-      text: "How long should you floss your teeth for?",
-      answers: [
-        { id: 0, text: "2 mins", isCorrect: false },
-        { id: 1, text: "3 mins", isCorrect: true },
-        { id: 2, text: "4 mins", isCorrect: false },
-        { id: 3, text: "5 mins", isCorrect: false },
-      ],
-    },
-    {
-      text: "How many times a day should you use mouthwash?",
-      answers: [
-        { id: 0, text: "1", isCorrect: false },
-        { id: 1, text: "2", isCorrect: true },
-        { id: 2, text: "8", isCorrect: true },
-        { id: 3, text: "3", isCorrect: false },
-      ],
-    },
-  ]
-
   
 
-  const [selectedAnswers, setSelectedAnswers] = createSignal(
-    new Array(questions.length).fill(null)
-  );
+
   
-
-  const answerClicked = (isCorrect) => {
-    console.log("answer clicked", isCorrect);
-    // Increment the score
-    if (isCorrect) {
-      // maybe u wanna do something here with the color 
-      selectedAnswers().push(isCorrect);
-    }
-
-    if (currentQuestion() + 1 < questions.length) {
-      setCurrentQuestion(currentQuestion() + 1);
-    } else {
-      setShowResults(true);
-    }
-  };
-
+let score;
   const nextQuestion = () => {
     if (currentQuestion() + 1 < questions.length) {
       setCurrentQuestion(currentQuestion() + 1);
     } else {
+      score = (questions.reduce((accumulator, question) => question.result ? accumulator + 1 : accumulator, 0 ));
       setShowResults(true);
     }
   };
@@ -124,7 +59,7 @@ function Quiz() {
       type="radio"
       id={`answer-${answer.id}`}
       name="answer"
-      onClick={() => answerClicked(answer.isCorrect)}
+      onClick={() => console.log("answer clicked", questions[currentQuestion()].result = answer.isCorrect)}
       
     />
     <label for={`answer-${answer.id}`}>{answer.text}</label>
@@ -132,7 +67,7 @@ function Quiz() {
 ))}
 
           </ul>
-          <div className="buttons">
+          <div class="buttons">
     <button class="back" onClick={previousQuestion}>Back</button>
     <button class="next" onClick={nextQuestion}>Next </button>
       </div>
@@ -146,3 +81,53 @@ function Quiz() {
 }
 
 export default Quiz;
+
+
+
+let questions =  [
+  {
+    text: "How many times a day should you brush your teeth?",
+    answers: [
+      { id: 0, text: "2", isCorrect: true },
+      { id: 1, text: "3", isCorrect: false },
+      { id: 2, text: "0", isCorrect: false },
+      { id: 3, text: "1", isCorrect: false },
+    ],
+  },
+  {
+    text: "how long should you brush your teeth for?",
+    answers: [
+      { id: 0, text: "2 Mins", isCorrect: false },
+      { id: 1, text: "3 Mins", isCorrect: true },
+      { id: 2, text: "4 Mins", isCorrect: false },
+      { id: 3, text: "5 Mins", isCorrect: false },
+    ],
+  },
+  {
+    text: "How many times a day should you floss your teeth?",
+    answers: [
+      { id: 0, text: "2", isCorrect: true },
+      { id: 1, text: "3", isCorrect: false },
+      { id: 2, text: "0", isCorrect: false },
+      { id: 3, text: "1", isCorrect: false },
+    ],
+  },
+  {
+    text: "How long should you floss your teeth for?",
+    answers: [
+      { id: 0, text: "2 mins", isCorrect: false },
+      { id: 1, text: "3 mins", isCorrect: true },
+      { id: 2, text: "4 mins", isCorrect: false },
+      { id: 3, text: "5 mins", isCorrect: false },
+    ],
+  },
+  {
+    text: "How many times a day should you use mouthwash?",
+    answers: [
+      { id: 0, text: "1", isCorrect: false },
+      { id: 1, text: "2", isCorrect: true },
+      { id: 2, text: "8", isCorrect: true },
+      { id: 3, text: "3", isCorrect: false },
+    ],
+  },
+]

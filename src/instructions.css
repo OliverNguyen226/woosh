@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Work+Sans:wght@600&display=swap");
 
-iframe {
+/* iframe {
     margin: 0 auto;
     margin-top: 7%;
     border-radius: 10px;
@@ -19,8 +19,8 @@ div.header{
     margin-left: 30%;
     margin-top: 20px;
     /* height: 84px; */
-}
-
+/* } */
+/* 
 img.logo {
     position: absolute;
     top: 0; 
@@ -45,7 +45,7 @@ hr {
 
 body {
     background-color: #D6EADF;
-}
+}  */
 
 /* img.logo { 
     margin-top: 13%;
