@@ -83,7 +83,7 @@ function Quiz() {
     <div class="App">
       {/* 1. Header  */}
       <div class="header">
-        <img  class="logo" src="SmallLogo.png" alt=""  style="position: absolute; top: 0; left: 0;" />
+        <img  class="logo" src="SmallLogo.png" alt=""  />
       <h1>Quiz - Hand Hygiene </h1>
       </div>
 

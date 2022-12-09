@@ -2,8 +2,31 @@
 
 iframe {
     margin: 0 auto;
-    margin-top: 15%;
+    margin-top: 7%;
     border-radius: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #5F7BB1;
+    margin: 0;
+    padding: 0;
+}
+
+div.header{
+    width: 244px;
+    margin-left: 30%;
+    margin-top: 20px;
+    /* height: 84px; */
+}
+
+img.logo {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    margin-left: 30px;
+    margin-top: 25px; 
 }
 
 h3 {
@@ -15,8 +38,9 @@ h3 {
 }
 
 hr {
-    color: black;
+    color: #000000;
     border: .2px solid black;
+    opacity: 39%;
 }
 
 body {
