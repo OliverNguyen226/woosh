@@ -7,8 +7,11 @@ function Quiz() {
   // Properties
   const [showResults, setShowResults] = createSignal(false);
   const [currentQuestion, setCurrentQuestion] = createSignal(0);
+  
+  const [score, setScore] = createSignal(0);
+  
   // const [questions, setQuestions] = createSignal()
-   let questions =  [
+  let questions =  [
     {
       text: "How many times a day should you brush your teeth?",
       answers: [
@@ -56,9 +59,11 @@ function Quiz() {
     },
   ]
 
-  const [score, setScore] = createSignal(0);
+  
 
-
+  const [selectedAnswers, setSelectedAnswers] = createSignal(
+    new Array(questions.length).fill(null)
+  );
   
 
   const answerClicked = (isCorrect) => {
@@ -66,7 +71,7 @@ function Quiz() {
     // Increment the score
     if (isCorrect) {
       // maybe u wanna do something here with the color 
-      setScore(score() + 1);
+      selectedAnswers().push(isCorrect);
     }
 
     if (currentQuestion() + 1 < questions.length) {
@@ -76,8 +81,19 @@ function Quiz() {
     }
   };
 
-  // q: how do i place all contents in the middle of the page?
-  // a: 
+  const nextQuestion = () => {
+    if (currentQuestion() + 1 < questions.length) {
+      setCurrentQuestion(currentQuestion() + 1);
+    } else {
+      setShowResults(true);
+    }
+  };
+
+  const previousQuestion = () => {
+    if (currentQuestion() > 0) {
+      setCurrentQuestion(currentQuestion() - 1);
+    }
+  };
 
   return (
     <div class="App">
@@ -87,14 +103,9 @@ function Quiz() {
       <h1>Quiz - Hand Hygiene </h1>
       </div>
 
-      {/* 2. Current Score  */}
-      {/* <h2>Score: {score()}</h2> */}
       
-
-      {/* 3. Show results or show the question game  */}
       {showResults() ? (
         /* 4. Final Results */
-        //Restuls
         <div>
             <h2>Results</h2>
             <p>You scored {score()} out of {questions.length}</p>
@@ -102,10 +113,6 @@ function Quiz() {
       ) : (
         /* 5. Question Card  !!!!!! */ 
         <div class="question-card">
-          {/* Current Question  */}
-          <h2>
-            {/* Question: {currentQuestion() + 1} out of {questions.length} */}
-          </h2>
           <h3 class="question-text">{questions[currentQuestion()].text}</h3>
 
           {/* List of possible answers  */}
@@ -118,6 +125,7 @@ function Quiz() {
       id={`answer-${answer.id}`}
       name="answer"
       onClick={() => answerClicked(answer.isCorrect)}
+      
     />
     <label for={`answer-${answer.id}`}>{answer.text}</label>
   </li>
@@ -125,8 +133,8 @@ function Quiz() {
 
           </ul>
           <div className="buttons">
-    <button class="back">Back</button>
-    <button class="next">Next </button>
+    <button class="back" onClick={previousQuestion}>Back</button>
+    <button class="next" onClick={nextQuestion}>Next </button>
       </div>
         </div>
         
